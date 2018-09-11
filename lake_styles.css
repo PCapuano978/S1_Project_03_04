@@ -1,0 +1,66 @@
+﻿@charset "utf-8" ;
+
+@font-face {
+    font-family: 'Champagne';
+    src: url('cac_champagne.woff') format('woff'),
+        url('cac_champagne.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DobkinPlain';
+    src: url('DobkinPlain.woff') format('woff'),
+        url('DobkinPlain.tff') format('truetype');
+}
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Patrick M Capuano
+   Date:   9.11.18
+   
+   Filename: lake_styles.css
+
+*/
+
+/* 
+-Definition of the character encoding used in the style sheet file 
+-Application of a web font (Two fonts are supplied for you in the html02  case4 folder.)  
+Setting background and text colors using both color values and color names  
+An application of a semi-transparent color  
+Selectors showing style rules applied to nested elements, child elements, and elements based on the id attribute  
+Styles that modify the appearance of list and list markers  
+Use of pseudo-elements and pseudo-classes as selectors 
+Styles that modify the padding space and margin space around an element  
+A style rule to generate content in the rendered page 
+*/
+
+/* Structural Styles */
+
+html {
+    background-color: rgba(255, 128, 54, 0.400);
+}
+
+section#leftcol h1 {
+    font-family: 'Champagne', Verdana, 'Geneva', Tahoma, sans-serif;
+    font-size: 3em;
+    margin: 10px 5px 10px 5px;
+}
+
+section#leftcol p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    color: saddlebrown;
+}
+
+/* Navigation Styles */
+
+
+
+/* Section Styles */
+
+
+
+/* Description List Styles */
