@@ -40,7 +40,8 @@ A style rule to generate content in the rendered page
 /* Structural Styles */
 
 html {
-    background-color: rgba(160, 60, 0, 0.4);
+    background-image: url("water_background_1.png"), url("water_background_2.png");
+    background-repeat: no-repeat;
 }
 
 /* Navigation Styles */
@@ -54,7 +55,7 @@ nav ul a {
 /* Section Styles */
 
 header {
-    background-color: rgba(255, 166, 0, 0.205);
+    background-color: rgba(255, 166, 0, 0.8);
     border-style: outset;
     border-width: 5px;
     border-color: aquamarine;
@@ -91,8 +92,14 @@ section#rightcol a {
 
 p::first-letter {
     font-size: xx-large;
+    color: rgb(125, 50, 0);
+}
 
-
+body {
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Blockquote Styles */
