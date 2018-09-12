@@ -28,19 +28,43 @@
 /* 
 -Definition of the character encoding used in the style sheet file 
 -Application of a web font (Two fonts are supplied for you in the html02  case4 folder.)  
-Setting background and text colors using both color values and color names  
-An application of a semi-transparent color  
+-Setting background and text colors using both color values and color names  
+-An application of a semi-transparent color  
 Selectors showing style rules applied to nested elements, child elements, and elements based on the id attribute  
-Styles that modify the appearance of list and list markers  
-Use of pseudo-elements and pseudo-classes as selectors 
-Styles that modify the padding space and margin space around an element  
+-Styles that modify the appearance of list and list markers  
+-Use of pseudo-elements and pseudo-classes as selectors 
+-Styles that modify the padding space and margin space around an element  
 A style rule to generate content in the rendered page 
 */
 
 /* Structural Styles */
 
 html {
-    background-color: rgba(255, 128, 54, 0.400);
+    background-color: rgba(160, 60, 0, 0.4);
+}
+
+/* Navigation Styles */
+
+nav ul a {
+    text-decoration: none;
+    text-emphasis: spaceing;
+}
+
+
+/* Section Styles */
+
+header {
+    background-color: rgba(255, 166, 0, 0.205);
+    border-style: outset;
+    border-width: 5px;
+    border-color: aquamarine;
+}
+
+header a {
+    Color: orangered; 
+    font-size: 1.6em;
+    font-family: 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    text-align: center;
 }
 
 section#leftcol h1 {
@@ -51,16 +75,31 @@ section#leftcol h1 {
 
 section#leftcol p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     color: saddlebrown;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-style: inset;
+    border-width: 5px;
+    border-color: orange;
 }
 
-/* Navigation Styles */
+section#rightcol a {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: brown;
+}
+
+p::first-letter {
+    font-size: xx-large;
 
 
+}
 
-/* Section Styles */
+/* Blockquote Styles */
 
-
+blockquote{
+    font-family: 'Champagne', Verdana, 'Geneva', Tahoma, sans-serif;
+    font-size: 1.7em;
+}
 
 /* Description List Styles */
