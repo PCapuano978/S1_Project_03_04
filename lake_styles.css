@@ -30,32 +30,36 @@
 -Application of a web font (Two fonts are supplied for you in the html02  case4 folder.)  
 -Setting background and text colors using both color values and color names  
 -An application of a semi-transparent color  
-Selectors showing style rules applied to nested elements, child elements, and elements based on the id attribute  
+-Selectors showing style rules applied to nested elements, child elements, and elements based on the id attribute  
 -Styles that modify the appearance of list and list markers  
 -Use of pseudo-elements and pseudo-classes as selectors 
 -Styles that modify the padding space and margin space around an element  
-A style rule to generate content in the rendered page 
+-A style rule to generate content in the rendered page 
 */
 
 /* Structural Styles */
 
 html {
-    background-image: url("water_background_1.png"), url("water_background_2.png");
+    background-image: url("water_background_1.png");
     background-repeat: no-repeat;
+    background-color: rgb(255, 150, 100);
 }
 
 /* Navigation Styles */
 
-nav ul a {
+nav > ul > a {
     text-decoration: none;
     text-emphasis: spaceing;
 }
 
+nav > h2 {
+    color: brown;
+}
 
 /* Section Styles */
 
 header {
-    background-color: rgba(255, 166, 0, 0.8);
+    background-color: rgba(255, 166, 0, 0.3);
     border-style: outset;
     border-width: 5px;
     border-color: aquamarine;
@@ -109,4 +113,26 @@ blockquote{
     font-size: 1.7em;
 }
 
-/* Description List Styles */
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+/* Aside Styles */
+
+aside > h2, ul {
+    color: rgb(77, 50, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+aside ul a {
+    color: brown;
+}
+/* Footer Style */
+
+footer {
+    text-align: center;
+}
