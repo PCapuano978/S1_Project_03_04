@@ -12,6 +12,9 @@
         url('DobkinPlain.tff') format('truetype');
 }
 
+/* The page's encoding was assinged here with "UTF-8" and both font families that came predownloaded
+in the project folder were implemented in the "font-face"s to be used later in the webpage. */
+
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 2
@@ -25,38 +28,32 @@
 
 */
 
-/* 
--Definition of the character encoding used in the style sheet file 
--Application of a web font (Two fonts are supplied for you in the html02  case4 folder.)  
--Setting background and text colors using both color values and color names  
--An application of a semi-transparent color  
--Selectors showing style rules applied to nested elements, child elements, and elements based on the id attribute  
--Styles that modify the appearance of list and list markers  
--Use of pseudo-elements and pseudo-classes as selectors 
--Styles that modify the padding space and margin space around an element  
--A style rule to generate content in the rendered page 
-*/
-
-/* Structural Styles */
+    /* Structural Styles */
 
 html {
     background-image: url("water_background_1.png");
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: rgb(255, 150, 100);
 }
-
+/* Setting a style rule for the entire page, I changed the background color and the uploaded image, 
+which takes up the whole page's background and stays fixed while the page scrolls. */
 /* Navigation Styles */
 
-nav > ul > a {
+nav > ul a {
     text-decoration: none;
-    text-emphasis: spaceing;
 }
+
+/* With this style rule, I removed the link underlines off to the right lists as well as the top, 
+which I believed look better without them as I don't feel they are nessesary in a list such as these. */
 
 nav > h2 {
     color: brown;
 }
 
-/* Section Styles */
+/* Along that list to the right, I changed the heading color to be brown instead of default black. */
+
+    /* Section Styles */
 
 header {
     background-color: rgba(255, 166, 0, 0.3);
@@ -65,6 +62,13 @@ header {
     border-color: aquamarine;
 }
 
+/* Within the header, I...
+1. Changed the background color to a shade of brown, while also making that a bit transparent.
+2. Set a border style to outset so I could implements a border.
+3. Then I set said border's width to a length of 5px.
+4. Lastly changed the border to a light blue color which I found to work well with the site theme.
+*/
+
 header a {
     Color: orangered; 
     font-size: 1.6em;
@@ -72,11 +76,25 @@ header a {
     text-align: center;
 }
 
+/* Within the header's links, I...
+1. Changed them from basic black, to a reddish shade of orange.
+2. Made their sizes much bigger to make them stand out more at the top of the page.
+3. Set their font family to something I found to be more visially apealling, as well as backups.
+4. Finally aligned the text to make sure they are evenly spaced in the header's area.
+*/
+
 section#leftcol h1 {
     font-family: 'Champagne', Verdana, 'Geneva', Tahoma, sans-serif;
     font-size: 3em;
-    margin: 10px 5px 10px 5px;
+    margin: 10px 5px 10px 7px;
+    
 }
+
+/* Under "h1" tages assinged with the leftcol ID, I... 
+1. Set the font family to something I feel would accomplish the role of making the text more appealing.
+2. Made it signifigant larger to make the "Welcome" text more visially distinguisable. 
+3. Added margin spaces to make the text more visially important with how less cramped it is.
+*/
 
 section#leftcol p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -87,17 +105,48 @@ section#leftcol p {
     border-style: inset;
     border-width: 5px;
     border-color: orange;
+    margin-left: 7px;
 }
+
+/* Oh boy. In the paragraph tags that appear with the section ID "leftcol", I...
+1. Set the font family to something simple and easy to read for the blocks of text.
+2. Additionally made the sizes much bigger to fill in space and make them more seeable.
+3. Made their color "saddlebrown" to go with the general color themeing of the website.
+4. Gave them "antiquewhite" which clashed nicely with the dark shade of brown the text has.
+5. Made the padding on every size 10 pixels long so they fit more in the center of the border.
+6. Inserted a border by first applying the style of "inset".
+7. Gave those border edges a nice width of 5 pixels.
+8. Set the border color to orange which supplies that color and brown on the top and left.
+9. Finally set the margin to 7 pixels to align them with the image and "Welcome" text.
+*/
+
+section#leftcol img {
+    margin-left: 7px;
+    border-style: dashed;
+    border-width: 3px;
+}
+
+/* This style rule gives the main image near the top...
+1. A left margin of 7 pixels that gives it space between the edges of the body and aligns the text.
+2. A border that is dashed to give a little more verity in the solid ones seen everywhere else.
+3. A border that also has a width of 3 pixels.
+*/
 
 section#rightcol a {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: brown;
 }
 
+/* Links within the right side of the page with the "rightcol" ID where given an appropriate font
+family as well as a color of brown to complement the rest of the web pages color theme. */
+
 p::first-letter {
     font-size: xx-large;
     color: rgb(125, 50, 0);
 }
+
+/* Every first letter found within every paragraph on the page where given a much larger size
+and a slightly darker shade of brown to give the paragraphs more visual flare. */
 
 body {
     border-style: solid;
@@ -106,33 +155,50 @@ body {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* Blockquote Styles */
+/* Everybody tag was assinged a 5 pixel, solid, black border that comes with the lightest shade
+of white as a background that is transparent and allows the background image/color to be seen. */
+
+    /* Blockquote Styles */
 
 blockquote{
     font-family: 'Champagne', Verdana, 'Geneva', Tahoma, sans-serif;
     font-size: 1.7em;
 }
 
+/* The blockquotes here were given a fitting quote like font family and a larger size to boot. */
+
 blockquote::before {
     content: open-quote;
 }
+
+/* Before the blockquote starts, there is a content stlye rule that adds in opening quotes. */
 
 blockquote::after {
     content: close-quote;
 }
 
-/* Aside Styles */
+/* Additonally, ending quotes are also added in after the blockquote tag ends. */
+
+    /* Aside Styles */
 
 aside > h2, ul {
-    color: rgb(77, 50, 0);
+    color: rgb(130, 90, 0);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+/* In "h2" elements AND unordered lists, the style rule of having a dark brown color and a 
+different font family was added in place. */
 
 aside ul a {
     color: brown;
 }
-/* Footer Style */
+/* Links whithin unordered lists that are also within the "aside" elements were also made brown. */
+
+    /* Footer Style */
 
 footer {
     text-align: center;
 }
+
+/* Last, but not least was the footer which had its text centered towards the middle as opposed
+to it being all the way to the left side of the page by the browser's default styles. */
